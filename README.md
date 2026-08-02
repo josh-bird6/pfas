@@ -4,7 +4,7 @@ This repository contains all the code necessary to reproduce the analysis in the
 
 The very first step is downloading mortality data from the CDC website for the nine survey cycles relevant to this project, 1999-00 to 2017-18 (https://ftp.cdc.gov/pub/Health_Statistics/NCHS/datalinkage/linked_mortality/). Note that for some reason, NHANES does not include PFAS data for 2001-02 cycle, so this cycle is excluded from the analysis. These data are not called directly to ensure this analysis will run if the URL above is altered or the mortality files are moved to a different location (i.e.future-proofing). ```Navigation.R``` specifies the survey cycles from which our exposure data are drawn.
 
-If you wish to reproduce the analysis step by step, clone the repository to your local machine, then open ```.Rproj``` and go into the ```Code``` subfolder and run the scripts in this order:
+If you wish to reproduce the analysis step by step, clone the repository to your local machine, then open ```Updated_Analysis.Rproj``` and go into the ```Code``` subfolder and run the scripts in this order:
 
 ## Data preparation and descriptive analysis
   - ```Functions.R``` defines the functions which are used to extract and format data presented throughout the document. Note that certain analysis-specific functions can be found in their respective analytical scripts.
