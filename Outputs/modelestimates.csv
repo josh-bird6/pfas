@@ -1,0 +1,21 @@
+cat3,Characteristic,cat,HR,lower,upper
+Unadjusted,PFOA,Univariate,0.94,0.87,1.01
+Unadjusted,PFOS,Univariate,1.19,1.09,1.29
+Unadjusted,PFNA,Univariate,0.93,0.85,1.02
+Unadjusted,PFHxS,Univariate,1.1,1.03,1.18
+Adjusted,PFOA,Multivariate adjusted complete case,0.83,0.78,0.9
+Adjusted,PFOS,Multivariate adjusted complete case,0.82,0.75,0.89
+Adjusted,PFNA,Multivariate adjusted complete case,0.88,0.81,0.96
+Adjusted,PFHxS,Multivariate adjusted complete case,0.91,0.84,0.98
+Adjusted,PFOA,Multivariate adjusted MICE,0.82,0.77,0.89
+Adjusted,PFOS,Multivariate adjusted MICE,0.82,0.76,0.9
+Adjusted,PFNA,Multivariate adjusted MICE,0.87,0.8,0.95
+Adjusted,PFHxS,Multivariate adjusted MICE,0.9,0.84,0.97
+Adjusted with Interaction Terms,PFOA,Multivariate interaction complete case,0.88,0.78,0.99
+Adjusted with Interaction Terms,PFOS,Multivariate interaction complete case,0.86,0.75,0.99
+Adjusted with Interaction Terms,PFNA,Multivariate interaction complete case,1,0.9,1.11
+Adjusted with Interaction Terms,PFHxS,Multivariate interaction complete case,1.01,0.92,1.11
+Adjusted with Interaction Terms,PFOA,Multivariate interaction MICE,0.87,0.78,0.96
+Adjusted with Interaction Terms,PFOS,Multivariate interaction MICE,0.92,0.81,1.05
+Adjusted with Interaction Terms,PFNA,Multivariate interaction MICE,0.97,0.87,1.08
+Adjusted with Interaction Terms,PFHxS,Multivariate interaction MICE,1.03,0.94,1.13
