@@ -173,31 +173,3 @@ exposure_extraction_fun <- function(Analyte, PFAS){
     select(Substance, `Median [1Q-3Q]`, Min, Max)
   
 }
-
-#############################
-#Function for creating forest plot
-forestplot_fun <- function(df, OUTCOME){
-  df %>% 
-    filter(outcome == OUTCOME) %>% 
-    mutate(cat3 = case_when(cat == 'Univariate' ~ cat,
-                            T~ cat3),
-           `Missingness Treatment` = as.factor(`Missingness Treatment`),
-           `Missingness Treatment` = fct_relevel(`Missingness Treatment`, c('Univariate Analysis \n(n = 13,798)',
-                                                                            'Complete Case \n(n = 10,630)',
-                                                                            'MICE \n(n = 13,798)'))) %>% 
-    ggplot(aes(x = Characteristic, y = HR, ymin = lower, ymax = upper,  color = `Missingness Treatment`, linetype = `Missingness Treatment`)) +
-    
-    #geom_linerange(position = position_dodge2(width = 0.5, reverse = 2), size = 1, key_glyph = 'path') +
-    geom_errorbar(position = position_dodge2(width = 0.5, reverse = 2), key_glyph = 'path') +
-    scale_linetype_manual(values = c('solid', 'solid', 'solid')) +
-    geom_point(position = position_dodge2(width = 1, reverse = T), size = 2) +
-    scale_color_manual(values = c('#66c2a5','#fc8d62', '#8da0cb'))+
-    facet_wrap(~factor(cat3, levels = c('Univariate', 'Multivariate Adjusted', 'Multivariate Adjusted + Interaction')), nrow = 3) +
-    geom_hline(yintercept = 1) +
-    coord_flip() +
-    theme_bw()+
-    theme(legend.position = 'bottom') +
-    scale_y_continuous(limits = c(.68, 1.7)) + 
-    labs(title = OUTCOME) +
-    geom_text(aes(label = paste0("HR: ", round(HR,2), " [CI: ", round(lower,2), ", ", round(upper,2), "]")), y = 1.44, position = position_dodge2(width = 0.9, reverse = T), hjust = 0, show.legend = F) 
-}
