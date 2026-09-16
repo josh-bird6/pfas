@@ -27,4 +27,4 @@ NOTE: each script contains a defined function as appropriate
   - A post-hoc analysis was carried out to assess the potential for unmeasured confounding via E-values, as well as the validity of incorporating interaction terms compared to a standard adjusted model via a multivariable Wald test in ```confounding.R```
 
 
-Contact: Joshua Bird (joshua.bird@bccsu.ubc.ca) 
+Contact: Joshua Bird (joshua.bird@ubc.ca) 
